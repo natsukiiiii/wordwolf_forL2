@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>プレイヤー設定</h1>
+    <p>人数</p>
+    人数カウントできるように、
+    人数入力して、その数だけ枠が表示されるようにしたい。
+    <br>ちなここは表示というより入力する場所、ここで入力した値をDBかどっかに保存して後から取り出し、他ファイルでも使えるようにしたい
+
+
+each文をさらにeachで囲むことはできるんだっけ？
+    <% @players.each do |player| %>
+   <div>
+      <%= player.content %>
+   </div>
+    <% end %>
+
+
+
+<p><%= link_to("ゲーム設定へ", "./game")%></p>
+
+</body>
+</html>
