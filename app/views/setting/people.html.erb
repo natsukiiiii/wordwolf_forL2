@@ -7,7 +7,8 @@
 </head>
 <body>
     <h1>プレイヤー設定</h1>
-    <p id ="count">人数</p>
+    <p>人数</p>
+    <p id ="count"></p>
 
   <div id="input_pluralBox">
     <div id="input_plural">
@@ -16,7 +17,6 @@
         <input type="button" value="＋" class="add pluralBtn">
     </div>
 </div>
-
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).on("click", ".add", function() {
@@ -29,11 +29,20 @@ $(document).on("click", ".del", function() {
     }
 });
 </script>
+<script>
+$(document).on("click", ".add", function() {
+    var size = $('div#input_plural').length;
+　　 var membercount = JSON.stringify(size);
+    console.log(size);
+    document.getElementById("count").innerHTML = membercount;
+    // alert(size);
+});
+</script>
 </form>
 
   <%= form_tag("../setting/people") do %>
      <input type="text" value="" name="content" placeholder="プレイヤー1">
-     <input type="submit" value="保存">
+     <input id ="members" type="submit" value="保存">
   <% end %>
 
 
