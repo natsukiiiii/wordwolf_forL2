@@ -7,11 +7,29 @@
 </head>
 <body>
     <h1>プレイヤー設定</h1>
-    <p>人数</p>
-    人数カウントできるように、
-    人数入力して、その数だけ枠が表示されるようにしたい。
-　　　each文をさらにeachで囲むことはできるんだっけ？
+    <p id ="count">人数</p>
 
+  <div id="input_pluralBox">
+    <div id="input_plural">
+    　　 <input type="button" value="－" class="del pluralBtn">
+        <input type="text" class="form-control" placeholder="プレイヤー１">
+        <input type="button" value="＋" class="add pluralBtn">
+    </div>
+</div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).on("click", ".add", function() {
+    $(this).parent().clone(true).insertAfter($(this).parent());
+});
+$(document).on("click", ".del", function() {
+    var target = $(this).parent();
+    if (target.parent().children().length > 1) {
+        target.remove();
+    }
+});
+</script>
+</form>
 
   <%= form_tag("../setting/people") do %>
      <input type="text" value="" name="content" placeholder="プレイヤー1">

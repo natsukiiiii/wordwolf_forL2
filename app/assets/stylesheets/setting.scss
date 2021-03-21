@@ -1,3 +1,25 @@
 // Place all the styles related to the setting controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#input_plural {
+    margin: 10px 0;
+    display: flex;
+}
+ 
+#input_plural input.form-control {
+    display: inline-block;
+    width: 75%;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+}
+ 
+#input_plural input.pluralBtn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+}
