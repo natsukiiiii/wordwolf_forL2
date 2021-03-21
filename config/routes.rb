@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'game/result' => "game#result"
 
   get 'setting/people' => "setting#people"
+  post 'setting/people' => "setting#people"
   get 'setting/game' => "setting#game"
 
   get '/' => "home#top"

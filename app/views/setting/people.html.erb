@@ -10,16 +10,13 @@
     <p>人数</p>
     人数カウントできるように、
     人数入力して、その数だけ枠が表示されるようにしたい。
-    <br>ちなここは表示というより入力する場所、ここで入力した値をDBかどっかに保存して後から取り出し、他ファイルでも使えるようにしたい
+　　　each文をさらにeachで囲むことはできるんだっけ？
 
 
-each文をさらにeachで囲むことはできるんだっけ？
-    <% @players.each do |player| %>
-   <div>
-      <%= player.content %>
-   </div>
-    <% end %>
-
+  <%= form_tag("../setting/people") do %>
+     <input type="text" value="" name="content" placeholder="プレイヤー1">
+     <input type="submit" value="保存">
+  <% end %>
 
 
 <p><%= link_to("ゲーム設定へ", "./game")%></p>
