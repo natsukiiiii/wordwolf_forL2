@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ウルフは誰？</h1>
+    <p>ウルフだと思う人をせーので指差し、票が最も多かった人を選択してください。</p>
+       <% @players.each do |player| %>
+   <div>
+      <%= player.content %>
+   </div>
+    <% end %>
+
+<p><%= link_to("提出", "./result")%></p>
+
+</body>
+</html>
